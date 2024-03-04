@@ -1,0 +1,65 @@
+app: getAirports
+env: happy-shape
+namespace: default
+chart:
+  repository: https://chart.onechart.dev
+  name: onechart
+  version: 0.64.0
+values:
+  containerPort: 80
+  description: ""
+  documentation: ""
+  gitRepository: moresk0/getAirports
+  gitSha: '{{ .SHA }}'
+  image:
+    repository: 127.0.0.1:32447/getAirports
+    tag: '{{ .SHA }}'
+  imagePullSecrets: []
+  ingress:
+    annotations: {}
+    host: ""
+    path: /
+    tlsEnabled: false
+  issues: ""
+  livenessProbe:
+    enabled: false
+    path: /
+    settings:
+      failureThreshold: 3
+      initialDelaySeconds: 0
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 3
+  logs: ""
+  metrics: ""
+  name: ""
+  ownerIm: ""
+  ownerName: ""
+  podAnnotations: {}
+  podDisruptionBudgetEnabled: true
+  podLabels: {}
+  probe:
+    enabled: false
+    path: /
+    settings:
+      failureThreshold: 3
+      initialDelaySeconds: 0
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 3
+  replicas: 1
+  resources:
+    ignore: false
+    ignoreLimits: true
+    limits:
+      cpu: 200m
+      memory: 200Mi
+    requests:
+      cpu: 200m
+      memory: 200Mi
+  sealedSecrets: {}
+  secretEnabled: false
+  spreadAcrossNodes: true
+  traces: ""
+  vars: {}
+  volumes: []
